@@ -1,0 +1,27 @@
+# This is Git's per-user configuration file.
+[user]
+[push]
+	default = simple
+[core]
+	autocrlf = input
+	excludesfile = /Users/ncohen/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[gui]
+	recentrepo = /Users/ncohen/dev/tests/flux
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[status]
+	submoduleSummary = true
+[user]
+	name = Nadav Cohen
+	email = ncohen@netflix.com
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
