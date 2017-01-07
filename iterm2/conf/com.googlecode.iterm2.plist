@@ -2399,9 +2399,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1171 139 606 456 -1440 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>598 490 918 498 0 0 1680 1050 </string>
+	<string>598 476 918 512 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 119 890 649 0 0 1680 1027 </string>
+	<string>-1440 5 1440 867 -1440 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>206 394 890 627 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_8E50DE6F-F711-4C24-AC86-05CB097B34CF</key>
@@ -2589,7 +2589,7 @@
 			<key>Background Image Is Tiled</key>
 			<false/>
 			<key>Background Image Location</key>
-			<string>~/.config/iterm2/conf/sky_stars.jpg</string>
+			<string>/Users/ncohen/dev/github/nadavc/dotfiles/iterm2/conf/sky_stars.jpg</string>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
