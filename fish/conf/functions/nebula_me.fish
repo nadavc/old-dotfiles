@@ -1,4 +1,4 @@
 function nebula_me
-  ln -s ~/dev/wrappers/wrapper/gradle gradle
-  ln -s ~/dev/wrappers/wrapper/gradlew gradlew
+  ln -s ~/dev/stash/nebula/wrapper/gradle gradle
+  ln -s ~/dev/stash/nebula/wrapper/gradlew gradlew
 end
