@@ -6,8 +6,10 @@ require('json')
 org = ARGV[0]
 base_dir = ARGV[1]
 
+puts "Using org: #{org} and base_dir: #{base_dir}"
+
 puts 'Enter GitHub token: '
-pass = gets
+pass = STDIN.gets.chomp
 
 uri = URI("https://api.github.com/orgs/#{org}/repos")
 uri.query = URI.encode_www_form([['per_page', '200']])
