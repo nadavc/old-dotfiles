@@ -6,3 +6,7 @@ set -x SCRIPT_WRAPPED_NEWT /tmp
 set -x GOPATH ~/dev/gopath
 
 status --is-interactive; and source (rbenv init -|psub)
+
+alias npm="newt exec npm --"
+alias node="newt exec node --"
+alias yarn="newt exec yarn --"
