@@ -1,0 +1,26 @@
+[includeIf "gitdir:~/dev/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/unmeshed/"]
+  path = ~/.gitconfig-unmeshed
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[pull]
+	rebase = true
+
+
+[alias]
+	v = version 
+	sw = switch
+	co = checkout
+	# prune all local branches that don't exist remotely anymore 
+	pb = !git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+	# git add and commit with provided message
+	ac = "!f() { git add . && git commit -m \"$1\"; }; f"
+	# nice git log view with graph
+	lg = log --oneline --graph --decorate --all
+	# run `git fu` to make a fixup commit and rebase/autosquash it into what you choose
+	fu = "!f() { TARGET=$(git log -n 50 --pretty=format:\"%h %s\" --no-merges | fzf | cut -c -7); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autosquash $TARGET^; }; f"
+
